@@ -1,6 +1,6 @@
 name: gicho
 description: Generic Flutter configuration, localization, startup, themes and UI foundations for Moztopia.
-version: 0.0.0
+version: 0.1.0
 publish_to: none
 repository: https://github.com/mozrin/gicho
 

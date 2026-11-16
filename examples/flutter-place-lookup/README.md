@@ -38,3 +38,17 @@ Offline mode uses fixed public city coordinates and disables the map; it is not
 a live Google result. Live Google
 service acceptance needs the user's configured project and is separate from
 host tests. This example does not store user location.
+
+For service setup, use Google's [Places API setup guide](https://developers.google.com/maps/documentation/places/web-service/get-api-key)
+and [API security guidance](https://developers.google.com/maps/api-security-best-practices).
+The inherited web development loader reads an unquoted `googleApiKey` scalar.
+For a local live-service run, add:
+
+```yaml
+placeLookup:
+  googleApiKey: YOUR_RESTRICTED_DEVELOPMENT_KEY
+```
+
+This is a client-visible development configuration, not a production credential
+storage pattern. No real key is distributed. Keep the populated asset local; the
+publication audit rejects real Google keys before a source push.

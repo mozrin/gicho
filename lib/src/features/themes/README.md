@@ -1,7 +1,7 @@
 # Themes
 
 Gicho permanently supplies Default, Ocean and Ember in
-[`assets/themes/`](../../../assets/themes/README.md). The [catalog](catalog/README.md)
+[`assets/themes/`](../../../../assets/themes/README.md). The [catalog](catalog/README.md)
 loads their seed colors and builds both light and dark Material themes through
 the [theme builder](theme_builder/README.md). There is no Harmony palette in
 these generic definitions.
@@ -12,7 +12,7 @@ appearance until the user selects Light or Dark. Pass the same controller to
 `GichoMaterialApp(themes: themes, ...)` and the shared
 [`ThemePicker`](picker/README.md). The picker owns its translated labels in
 Gicho's central catalogs. The
-[independent example](../../../examples/flutter-themes/README.md) shows the
+[independent example](../../../../examples/flutter-themes/README.md) shows the
 complete startup composition.
 
 The existing `gichoTheme(seedColor: color)` builder remains available when

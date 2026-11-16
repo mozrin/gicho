@@ -29,9 +29,8 @@ Host tests do not prove physical camera/device behavior. All seven apps also
 include web scaffolding: run `flutter run -d chrome` for browser verification.
 The place-lookup app starts in labelled offline mode without credentials; live
 Google mode requires user-supplied configuration.
-The bootstrap example exercises configuration and branding. Authentication
-examples belong in Authackage because
-Gicho does not depend on it.
+The bootstrap example exercises configuration and branding. Authentication and business policy remain application-owned; no companion
+package is required for these Gicho examples.
 
 ## Repeatable acceptance
 

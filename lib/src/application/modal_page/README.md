@@ -3,8 +3,7 @@
 `GichoModalPage` is a full-screen page for a guided flow, not a floating
 dialog. It uses the ordinary Material page frame with one title, optional app
 actions and safe-area content while omitting ancillary navigation. Use it for
-onboarding, About, License or a focused task. Authackage may later use it for
-provider selection.
+onboarding, About, License or an application-owned provider-selection task.
 
 Back is visible by default. Its tooltip uses the active Material locale unless
 the caller supplies `backLabel`. By default it calls `Navigator.maybePop`;

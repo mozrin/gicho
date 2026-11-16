@@ -71,8 +71,7 @@ and the [independent bootstrap example](../examples/flutter-bootstrap/README.md)
 `schemaVersion: 1` belongs to Gicho and cannot be changed by an app schema.
 An app YAML may omit it and inherit the package version; an explicit mismatch
 fails validation. Breaking package-owned configuration changes require a new
-version and migration guide. This version is independent of Authackage's
-configuration version.
+version and migration guide. The schema version is independent of the numeric package source version.
 
 An app may set `brand.name`, `brand.logoAsset` and `brand.markAsset` in its YAML.
 The full logo serves splash/sign-in surfaces; the mark serves small placements.

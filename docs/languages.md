@@ -49,6 +49,5 @@ consumer catalog keys and configuration values using `zh-Hans` must change to
 the current 20-language set; it would need its own future contract and catalog.
 
 Gicho translates only its own controls. An application supplies and verifies
-its own text before enabling a locale; Authackage owns its authentication text.
-Lavackage and Typackage are locale-neutral because they currently own no
-user-facing copy. Neither limits the app's locale selection.
+its own text before enabling a locale, including authentication and business
+copy. No companion localization package or repository is required.
