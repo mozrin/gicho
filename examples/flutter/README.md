@@ -33,3 +33,10 @@ rendered gallery navigation, sign-in handoff, failure and retry path. The
 package tests cover loading and ignoring a late result from an old context.
 The router composition test shows an app-owned `RouterConfig` passed to
 `GichoMaterialApp.router` without a Harmony dependency.
+
+## Browser development
+
+Run `flutter run -d chrome` to build and launch this app in a browser. Linux
+scaffolding is also available. Choose a connected Android device for native
+mobile checks. Build/startup alone does not establish interactive acceptance;
+exercise this example's documented scenario and see the root validation record.

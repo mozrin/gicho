@@ -25,7 +25,18 @@ when they need a separate construct. Examples use the public
 Most focused apps include Android and Linux host scaffolding; the scanner
 example targets Android because its camera plugin lacks a Linux backend. Run
 `flutter pub get`, `flutter analyze` and `flutter test` inside each directory.
-The owner runs installed device checks; host tests do not prove device behavior.
+Host tests do not prove physical camera/device behavior. All seven apps also
+include web scaffolding: run `flutter run -d chrome` for browser verification.
+The place-lookup app starts in labelled offline mode without credentials; live
+Google mode requires user-supplied configuration.
 The bootstrap example exercises configuration and branding. Authentication
 examples belong in Authackage because
 Gicho does not depend on it.
+
+## Repeatable acceptance
+
+Execute `python3 tools/verify_examples/verify_examples.py` from the repository
+root for package and maintained-example dependency resolution, analysis and
+tests. Add `--build-web` to create development web builds. The script executes
+checks; it does not replace interactive runtime or physical-device acceptance.
+See [validation evidence](../docs/validation.md) for what was actually verified.

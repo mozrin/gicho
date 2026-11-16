@@ -38,3 +38,10 @@ From this directory, run `flutter pub get`, `flutter analyze` and
 target from `flutter devices` and run `flutter run -d <device-id>` on a
 development device you control. The owner performs physical-device testing.
 Only Android and Linux platform scaffolds are included.
+
+## Browser development
+
+Run `flutter run -d chrome` to build and launch this app in a browser. Linux
+scaffolding is also available. Choose a connected Android device for native
+mobile checks. Build/startup alone does not establish interactive acceptance;
+exercise this example's documented scenario and see the root validation record.

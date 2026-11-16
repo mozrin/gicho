@@ -1,6 +1,6 @@
 # Flutter scanner example
 
-This independent Android app tests Gicho's configurable scanner with
+This independent Android and web app tests Gicho's configurable scanner with
 three consumer meanings. **Employee** accepts `EMP:` values; **Menu**
 accepts links under `https://example.org/menu/`; **Product** accepts a
 barcode and displays its detected format and value. Those meanings exist only
@@ -47,3 +47,12 @@ The public package API is described in the
 [Scanner feature guide](../../lib/src/features/scanner/README.md).
 The example uses a local path dependency so package edits are testable without
 changing a published tag. Its Android manifest declares camera permission.
+
+## Browser verification and limits
+
+Run `flutter run -d chrome` for the supported web camera backend. Camera access
+requires localhost or HTTPS plus browser permission and an available camera.
+The native permission, autofocus, torch and real QR/barcode detection acceptance
+remain device-specific; an unavailable camera is a documented validation limit.
+Web startup and cancellation do not prove physical camera decoding. Linux has
+no mobile_scanner camera backend.

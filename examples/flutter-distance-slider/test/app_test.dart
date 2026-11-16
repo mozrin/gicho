@@ -11,5 +11,6 @@ void main() {
     final slider = tester.widget<DistanceSlider>(find.byType(DistanceSlider));
     expect(slider.value.maximumDistanceKm, 10);
     expect(slider.maximumDistance, 100);
+    expect(tester.takeException(), isNull);
   });
 }

@@ -1,7 +1,9 @@
 # Flutter place lookup playground
 
-This is the single live example for Gicho's PlaceLookup. Search for a
-real place with Google Places and choose a suggestion. The returned location
+This example exercises Gicho's PlaceLookup. With no key, it starts in clearly
+labelled offline mode: search Bangkok, Auckland or Cairo and select a sample
+city. With your own configured Google key, search live Google Places and choose
+a suggestion. The returned location
 starts as an approximate 3 km area. The map uses Google Maps on Android, iOS,
 and web.
 
@@ -26,12 +28,13 @@ device checks. Host analysis is `flutter analyze`. Enable the matching Google
 Maps API for the target platform as well as Places API (New).
 
 No Google key is shipped. Set a user-owned, API-restricted development key in
-`assets/gicho/gicho.yaml` under `placeLookup.googleApiKey`, enable Places API
+`assets/gicho/gicho.yaml` by adding a `placeLookup` map with `googleApiKey`, enable Places API
 (New) and the appropriate Maps API, then run the example locally. Never commit
 the populated file. Browser/native assets expose client keys; restrict them at
 the provider and use a consumer-owned secure adapter for production. Gicho
 rejects this development Google provider in release mode.
 
-Without configuration the example reports that setup is required. Live Google
+Offline mode uses fixed public city coordinates and disables the map; it is not
+a live Google result. Live Google
 service acceptance needs the user's configured project and is separate from
 host tests. This example does not store user location.

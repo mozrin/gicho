@@ -76,11 +76,9 @@ class _DistanceSelectionState extends State<DistanceSelection> {
               const SizedBox(height: 24),
               const Divider(),
               const SizedBox(height: 16),
-              DecoratedBox(
-                decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.surfaceContainerHigh,
-                  borderRadius: BorderRadius.circular(16),
-                ),
+              Material(
+                color: Theme.of(context).colorScheme.surfaceContainerHigh,
+                borderRadius: BorderRadius.circular(16),
                 child: Padding(
                   padding: const EdgeInsets.all(20),
                   child: Column(

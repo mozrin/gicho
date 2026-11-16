@@ -49,9 +49,7 @@
       }
       const configuration = await response.text();
       const match = configuration.match(/^\s*googleApiKey:\s*([^\s#]+)/m);
-      if (!match) {
-        throw new Error('The Google Maps key is missing.');
-      }
+      if (match) {
       await new Promise((resolve, reject) => {
         const maps = document.createElement('script');
         maps.src = 'https://maps.googleapis.com/maps/api/js?key=' + encodeURIComponent(match[1]);
@@ -59,6 +57,7 @@
         maps.onerror = reject;
         document.head.appendChild(maps);
       });
+      }
       const flutter = document.createElement('script');
       flutter.src = 'flutter_bootstrap.js';
       flutter.async = true;

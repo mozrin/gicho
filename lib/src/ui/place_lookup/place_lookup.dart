@@ -270,7 +270,8 @@ class _PlaceLookupState extends State<PlaceLookup> {
           subtitle: Text(suggestion.subtitle),
           onTap: () => _select(suggestion),
         ),
-      if (_suggestions.isNotEmpty) const Text('Google Maps'),
+      if (_suggestions.any((suggestion) => suggestion.providerId == 'google'))
+        const Text('Google Maps'),
       if (_selected != null && widget.showSelectedCoordinates)
         Text(
           'Selected area: ${_selected!.latitude}, ${_selected!.longitude} '

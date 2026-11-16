@@ -1,6 +1,8 @@
 import 'package:gicho/gicho.dart';
 import 'package:flutter/material.dart';
 
+import 'parts/PlaceLookupMapScreenDemoProvider.dart';
+
 class PlaceLookupMapScreen extends StatefulWidget {
   const PlaceLookupMapScreen({required this.configuration, super.key});
 
@@ -11,7 +13,16 @@ class PlaceLookupMapScreen extends StatefulWidget {
 }
 
 class _PlaceLookupMapScreenState extends State<PlaceLookupMapScreen> {
+  final _demoProvider = PlaceLookupMapScreenDemoProvider();
   PlaceLookupSelection? _selection;
+
+  bool get _offline =>
+      ((widget.configuration['placeLookup']
+                      as Map<String, dynamic>?)?['googleApiKey']
+                  as String? ??
+              '')
+          .trim()
+          .isEmpty;
   var _draftShowMap = true;
   var _draftGestures = true;
   var _draftZoomControls = true;
@@ -66,19 +77,38 @@ class _PlaceLookupMapScreenState extends State<PlaceLookupMapScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              PlaceLookup.fromConfiguration(
-                key: ValueKey(_revision),
-                configuration: widget.configuration,
-                showMap: _showMap,
-                mapGesturesEnabled: _gestures,
-                showZoomControls: _zoomControls,
-                showSelectedCoordinates: _coordinates,
-                coordinatePrecisionKm: _precision,
-                initialZoom: _zoom,
-                mapHeight: _height,
-                onSelected: (selection) =>
-                    setState(() => _selection = selection),
-              ),
+              if (_offline)
+                const Padding(
+                  padding: EdgeInsets.only(bottom: 16),
+                  child: Text(
+                    'Offline demo: search Bangkok, Auckland or Cairo. '
+                    'Google search and maps need your own development key.',
+                  ),
+                ),
+              if (_offline)
+                PlaceLookup(
+                  key: ValueKey(_revision),
+                  provider: _demoProvider,
+                  showMap: false,
+                  showSelectedCoordinates: _coordinates,
+                  coordinatePrecisionKm: _precision,
+                  onSelected: (selection) =>
+                      setState(() => _selection = selection),
+                )
+              else
+                PlaceLookup.fromConfiguration(
+                  key: ValueKey(_revision),
+                  configuration: widget.configuration,
+                  showMap: _showMap,
+                  mapGesturesEnabled: _gestures,
+                  showZoomControls: _zoomControls,
+                  showSelectedCoordinates: _coordinates,
+                  coordinatePrecisionKm: _precision,
+                  initialZoom: _zoom,
+                  mapHeight: _height,
+                  onSelected: (selection) =>
+                      setState(() => _selection = selection),
+                ),
               if (_selection != null) ...[
                 const SizedBox(height: 12),
                 Text(
@@ -100,7 +130,9 @@ class _PlaceLookupMapScreenState extends State<PlaceLookupMapScreen> {
               SwitchListTile(
                 title: const Text('Show map'),
                 value: _draftShowMap,
-                onChanged: (value) => setState(() => _draftShowMap = value),
+                onChanged: _offline
+                    ? null
+                    : (value) => setState(() => _draftShowMap = value),
               ),
               SwitchListTile(
                 title: const Text('Map gestures'),

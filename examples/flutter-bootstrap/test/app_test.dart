@@ -39,9 +39,11 @@ void main() {
     expect(brand.name, 'Bootstrap Example');
     expect(brand.logoAsset, 'assets/launch_logo.png');
     expect(brand.markAsset, 'assets/launch_logo.png');
-    expect(configuration['app'], {
-      'startupMessage': 'Ready from application configuration',
-    });
+    expect(
+      configuration['app'],
+      containsPair('startupMessage', 'Ready from application configuration'),
+    );
+    expect((configuration['app'] as Map)['startup'], isA<Map>());
   });
 
   test('missing optional app assets inherit package defaults', () async {
@@ -52,7 +54,11 @@ void main() {
         );
     expect(configuration['schemaVersion'], 1);
     expect(GichoBrand.fromConfiguration(configuration).name, 'Gicho');
-    expect(configuration['app'], isEmpty);
+    expect(configuration['app'], contains('startup'));
+    expect(
+      (configuration['app'] as Map)['startup'],
+      containsPair('transition', 'fade'),
+    );
   });
 
   test('loaded app schema rejects wrong values and versions', () async {
