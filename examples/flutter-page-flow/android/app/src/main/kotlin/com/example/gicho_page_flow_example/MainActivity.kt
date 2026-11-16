@@ -1,0 +1,5 @@
+package com.example.gicho_page_flow_example
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity : FlutterActivity()

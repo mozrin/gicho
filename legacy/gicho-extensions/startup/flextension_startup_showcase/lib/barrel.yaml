@@ -1,0 +1,11 @@
+filename: flextension_startup_showcase.dart
+prefix: "exports_"
+label: "// Created with barrel workflow utility."
+levels: all
+exclude:
+  - .git
+  - .dart_tool
+  - test
+naming:
+  2: skip
+  N: auto

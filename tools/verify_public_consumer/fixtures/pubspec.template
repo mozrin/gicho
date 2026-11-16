@@ -1,0 +1,15 @@
+name: gicho_public_consumer
+publish_to: none
+environment:
+  sdk: ^3.13.5
+dependencies:
+  flutter:
+    sdk: flutter
+  gicho:
+    git:
+      url: https://github.com/mozrin/gicho.git
+      ref: __REF__
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0

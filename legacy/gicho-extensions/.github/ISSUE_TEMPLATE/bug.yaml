@@ -1,0 +1,19 @@
+name: Bug report
+description: Report an issue in a Gicho extension.
+title: "[Bug]: "
+labels: ["bug"]
+projects: ["moztopia/6"]
+type: bug
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true

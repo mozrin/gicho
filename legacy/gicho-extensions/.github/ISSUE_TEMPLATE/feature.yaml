@@ -1,0 +1,19 @@
+name: Extension proposal
+description: Propose a focused Gicho extension capability.
+title: "[Feature]: "
+labels: ["enhancement"]
+projects: ["moztopia/6"]
+type: feature
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true

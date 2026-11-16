@@ -1,0 +1,22 @@
+const exampleEnglish = <String, String>{
+  'app.title': 'Code scanner example',
+  'app.intro': 'Choose what this scan means to the app.',
+  'app.employee': 'Scan employee QR',
+  'app.menu': 'Scan menu QR',
+  'app.product': 'Scan product barcode',
+  'app.employee.instruction': 'Point the camera at an employee QR code.',
+  'app.menu.instruction': 'Point the camera at a menu QR code.',
+  'app.product.instruction': 'Point the camera at a product barcode.',
+  'app.employee.invalid': 'This is not an employee code. Try another QR.',
+  'app.menu.invalid': 'This is not a menu link. Try another QR.',
+  'app.camera.error': 'The camera could not start. Go back and try again.',
+  'app.camera.permission':
+      'Allow camera access in device settings, then retry.',
+  'app.validation.error': 'The scan could not be checked. Try again.',
+  'app.torch.on': 'Turn on flashlight',
+  'app.torch.off': 'Turn off flashlight',
+  'app.result': 'Accepted code:',
+  'app.samples': 'Sample QRs for a second device',
+  'app.sample.employee': 'Sample employee QR',
+  'app.sample.menu': 'Sample menu QR',
+};

@@ -1,0 +1,401 @@
+{
+  "source_version": "0.1.0",
+  "checked_at_utc": "2026-11-16T16:42:15.256384+00:00",
+  "code_checkpoint": "f06f5da9fc562f1ab8daabd1c3f400094911afb5",
+  "environment": {
+    "flutter": "3.47.6",
+    "dart": "3.13.5",
+    "host": "Linux x64",
+    "browser": "Chrome"
+  },
+  "checks": [
+    {
+      "package": "package",
+      "command": [
+        "flutter",
+        "pub",
+        "get"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "package",
+      "command": [
+        "flutter",
+        "analyze"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "package",
+      "command": [
+        "flutter",
+        "test",
+        "test",
+        "lib",
+        "--reporter",
+        "expanded"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter",
+      "command": [
+        "flutter",
+        "pub",
+        "get"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter",
+      "command": [
+        "flutter",
+        "analyze"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter",
+      "command": [
+        "flutter",
+        "test",
+        "--reporter",
+        "expanded"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter",
+      "command": [
+        "flutter",
+        "build",
+        "web",
+        "--debug"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter-bootstrap",
+      "command": [
+        "flutter",
+        "pub",
+        "get"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter-bootstrap",
+      "command": [
+        "flutter",
+        "analyze"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter-bootstrap",
+      "command": [
+        "flutter",
+        "test",
+        "--reporter",
+        "expanded"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter-bootstrap",
+      "command": [
+        "flutter",
+        "build",
+        "web",
+        "--debug"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter-distance-slider",
+      "command": [
+        "flutter",
+        "pub",
+        "get"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter-distance-slider",
+      "command": [
+        "flutter",
+        "analyze"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter-distance-slider",
+      "command": [
+        "flutter",
+        "test",
+        "--reporter",
+        "expanded"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter-distance-slider",
+      "command": [
+        "flutter",
+        "build",
+        "web",
+        "--debug"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter-page-flow",
+      "command": [
+        "flutter",
+        "pub",
+        "get"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter-page-flow",
+      "command": [
+        "flutter",
+        "analyze"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter-page-flow",
+      "command": [
+        "flutter",
+        "test",
+        "--reporter",
+        "expanded"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter-page-flow",
+      "command": [
+        "flutter",
+        "build",
+        "web",
+        "--debug"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter-place-lookup",
+      "command": [
+        "flutter",
+        "pub",
+        "get"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter-place-lookup",
+      "command": [
+        "flutter",
+        "analyze"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter-place-lookup",
+      "command": [
+        "flutter",
+        "test",
+        "--reporter",
+        "expanded"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter-place-lookup",
+      "command": [
+        "flutter",
+        "build",
+        "web",
+        "--debug"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter-scanner",
+      "command": [
+        "flutter",
+        "pub",
+        "get"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter-scanner",
+      "command": [
+        "flutter",
+        "analyze"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter-scanner",
+      "command": [
+        "flutter",
+        "test",
+        "--reporter",
+        "expanded"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter-scanner",
+      "command": [
+        "flutter",
+        "build",
+        "web",
+        "--debug"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter-themes",
+      "command": [
+        "flutter",
+        "pub",
+        "get"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter-themes",
+      "command": [
+        "flutter",
+        "analyze"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter-themes",
+      "command": [
+        "flutter",
+        "test",
+        "--reporter",
+        "expanded"
+      ],
+      "exit_code": 0
+    },
+    {
+      "package": "flutter-themes",
+      "command": [
+        "flutter",
+        "build",
+        "web",
+        "--debug"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "test_counts": {
+    "package": 80,
+    "flutter": 3,
+    "flutter-bootstrap": 5,
+    "flutter-distance-slider": 1,
+    "flutter-page-flow": 1,
+    "flutter-place-lookup": 2,
+    "flutter-scanner": 4,
+    "flutter-themes": 2
+  },
+  "resolved_dependencies": {
+    "args": "2.7.0",
+    "async": "2.13.1",
+    "boolean_selector": "2.1.2",
+    "characters": "1.4.1",
+    "clock": "1.1.3",
+    "code_assets": "2.2.0",
+    "collection": "1.19.1",
+    "crypto": "3.0.8",
+    "csslib": "1.0.2",
+    "fake_async": "1.3.3",
+    "ffi": "2.2.0",
+    "file": "7.0.1",
+    "flutter": "0.0.0",
+    "flutter_lints": "6.0.0",
+    "flutter_localizations": "0.0.0",
+    "flutter_plugin_android_lifecycle": "2.0.35",
+    "flutter_test": "0.0.0",
+    "flutter_web_plugins": "0.0.0",
+    "google_maps": "8.3.0",
+    "google_maps_flutter": "2.19.0",
+    "google_maps_flutter_android": "2.21.0",
+    "google_maps_flutter_ios": "2.18.7",
+    "google_maps_flutter_platform_interface": "2.18.0",
+    "google_maps_flutter_web": "0.6.5",
+    "hooks": "2.2.0",
+    "html": "0.15.7",
+    "http": "1.6.0",
+    "http_parser": "4.1.2",
+    "intl": "0.20.3",
+    "jni": "1.1.2",
+    "jni_util": "1.0.0",
+    "json_schema": "5.2.2",
+    "leak_tracker": "11.0.2",
+    "leak_tracker_flutter_testing": "3.0.10",
+    "leak_tracker_testing": "3.0.2",
+    "lints": "6.1.0",
+    "logging": "1.3.0",
+    "matcher": "0.12.20",
+    "material_color_utilities": "0.13.0",
+    "meta": "1.19.0",
+    "mobile_scanner": "7.5.0",
+    "objective_c": "9.6.4",
+    "package_config": "3.0.0",
+    "path": "1.9.1",
+    "path_provider_linux": "2.2.2",
+    "path_provider_platform_interface": "2.1.3",
+    "path_provider_windows": "2.3.0",
+    "platform": "3.2.0",
+    "plugin_platform_interface": "2.1.8",
+    "pub_semver": "2.2.1",
+    "quiver": "3.2.2",
+    "record_use": "1.1.1",
+    "rfc_6901": "0.2.1",
+    "sanitize_html": "2.2.0",
+    "shared_preferences": "2.5.6",
+    "shared_preferences_android": "2.5.5",
+    "shared_preferences_foundation": "2.6.2",
+    "shared_preferences_linux": "2.4.1",
+    "shared_preferences_platform_interface": "2.4.2",
+    "shared_preferences_web": "2.4.3",
+    "shared_preferences_windows": "2.4.1",
+    "sky_engine": "0.0.0",
+    "source_span": "1.10.2",
+    "stack_trace": "1.12.2",
+    "stream_channel": "2.1.4",
+    "stream_transform": "2.1.2",
+    "string_scanner": "1.4.1",
+    "term_glyph": "1.2.2",
+    "test_api": "0.7.12",
+    "typed_data": "1.4.0",
+    "uri": "1.0.0",
+    "vector_math": "2.4.4",
+    "vm_service": "15.4.0",
+    "web": "1.1.2",
+    "xdg_directories": "1.1.0",
+    "yaml": "3.1.4"
+  },
+  "native_gallery": {
+    "target": "linux",
+    "mode": "debug",
+    "built": true,
+    "startup_observed_seconds": 8
+  },
+  "limits": [
+    "No physical video-input device; scanner route/error/cancel verified, decoding/torch/focus not verified.",
+    "Live Google service calls require user-owned restricted configuration; offline provider and mocked adapter tests verified.",
+    "Native Android/iOS/macOS/Windows and live Wasm runtime not accepted by these host checks."
+  ],
+  "publication_evidence": "https://github.com/mozrin/gicho/issues/4"
+}

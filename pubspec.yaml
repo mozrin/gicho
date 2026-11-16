@@ -1,0 +1,34 @@
+name: gicho
+description: Generic Flutter configuration, localization, startup, themes and UI foundations for Moztopia.
+version: 0.1.0
+publish_to: none
+repository: https://github.com/mozrin/gicho
+
+environment:
+  sdk: ^3.13.1
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  google_maps_flutter: ^2.18.2
+  http: ^1.6.0
+  json_schema: ^5.2.2
+  mobile_scanner: ^7.0.0
+  shared_preferences: ^2.5.5
+  yaml: ^3.1.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  assets:
+    - assets/gicho.yaml
+    - assets/gicho.schema.json
+    - assets/themes/default.yaml
+    - assets/themes/ocean.yaml
+    - assets/themes/ember.yaml

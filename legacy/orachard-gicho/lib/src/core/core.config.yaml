@@ -1,0 +1,12 @@
+appBar:
+  actions:
+    brightness:
+      enabled: false
+    theme:
+      enabled: false
+    language:
+      enabled: false
+    configDisplay:
+      enabled: false
+    logout:
+      enabled: false

@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/localization.config.schema.json",
+  "title": "Moztopia localization configuration",
+  "description": "Controls required local and optional remote translation catalogs.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "fallbackLanguage": {
+      "description": "The required package-owned fallback language.",
+      "type": "string",
+      "const": "en",
+      "x-moztopia-locked": true
+    },
+    "localSource": {
+      "description": "The source adapter used for bundled catalogs.",
+      "type": "string",
+      "enum": ["assets"],
+      "x-moztopia-locked": true
+    },
+    "remoteEnabled": {
+      "description": "Whether updated catalogs should be loaded remotely.",
+      "type": "boolean",
+      "x-moztopia-locked": false
+    },
+    "remoteSource": {
+      "description": "The source adapter used for remote catalogs.",
+      "type": "string",
+      "enum": ["git"],
+      "x-moztopia-locked": true
+    },
+    "remoteLoadMode": {
+      "description": "Load remotely in the background or block initialization until complete.",
+      "type": "string",
+      "enum": ["background", "blocking"],
+      "x-moztopia-locked": false
+    },
+    "remoteRepository": {
+      "description": "Public HTTPS GitHub repository containing updated catalogs.",
+      "type": "string",
+      "pattern": "^https://github\\.com/[^/]+/[^/]+/?$",
+      "x-moztopia-locked": false
+    },
+    "remotePath": {
+      "description": "Path inside the remote repository containing this app's catalogs.",
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+$",
+      "x-moztopia-locked": false
+    },
+    "remoteReference": {
+      "description": "Git branch, tag, or commit used for remote catalogs.",
+      "type": "string",
+      "minLength": 1,
+      "x-moztopia-locked": false
+    }
+  }
+}

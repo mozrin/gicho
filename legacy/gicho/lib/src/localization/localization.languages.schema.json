@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/localization.languages.schema.json",
+  "title": "Moztopia language metadata registry",
+  "type": "object",
+  "minProperties": 1,
+  "propertyNames": { "pattern": "^[a-z]{2,3}$" },
+  "additionalProperties": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["label", "iso639", "names"],
+    "properties": {
+      "label": { "type": "string", "minLength": 1 },
+      "iso639": { "type": "string", "pattern": "^[a-z]{2,3}$" },
+      "names": {
+        "description": "The language name translated into every registered display language.",
+        "type": "object",
+        "minProperties": 1,
+        "propertyNames": { "pattern": "^[a-z]{2,3}$" },
+        "additionalProperties": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

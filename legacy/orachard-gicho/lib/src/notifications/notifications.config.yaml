@@ -1,0 +1,27 @@
+channels:
+  inApp:
+    enabled: true
+  push:
+    enabled: false
+  email:
+    enabled: false
+presentation:
+  pageSize: 20
+copy:
+  title: gicho.notifications.title
+  open: gicho.notifications.open
+  heading: gicho.notifications.heading
+  introduction: gicho.notifications.introduction
+  markAllRead: gicho.notifications.markAllRead
+  empty: gicho.notifications.empty
+  emptyDetail: gicho.notifications.emptyDetail
+  unreadSemantics: gicho.notifications.unreadSemantics
+  readSemantics: gicho.notifications.readSemantics
+  loadFailed: gicho.notifications.loadFailed
+  loadFailedDetail: gicho.notifications.loadFailedDetail
+  retry: gicho.notifications.retry
+  saveFailed: gicho.notifications.saveFailed
+  loadMore: gicho.notifications.loadMore
+  loadMoreFailed: gicho.notifications.loadMoreFailed
+coreCatalog: []
+catalog: []

@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/notifications.config.schema.json",
+  "title": "Moztopia notifications configuration",
+  "description": "Controls notification channels, presentation, localized copy, and the consuming application's notification catalog.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "channels": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "inApp": { "$ref": "#/$defs/channel" },
+        "push": { "$ref": "#/$defs/channel" },
+        "email": { "$ref": "#/$defs/channel" }
+      }
+    },
+    "presentation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "pageSize": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        }
+      }
+    },
+    "copy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": { "$ref": "#/$defs/localizationKey" },
+        "open": { "$ref": "#/$defs/localizationKey" },
+        "heading": { "$ref": "#/$defs/localizationKey" },
+        "introduction": { "$ref": "#/$defs/localizationKey" },
+        "markAllRead": { "$ref": "#/$defs/localizationKey" },
+        "empty": { "$ref": "#/$defs/localizationKey" },
+        "emptyDetail": { "$ref": "#/$defs/localizationKey" },
+        "unreadSemantics": { "$ref": "#/$defs/localizationKey" },
+        "readSemantics": { "$ref": "#/$defs/localizationKey" },
+        "loadFailed": { "$ref": "#/$defs/localizationKey" },
+        "loadFailedDetail": { "$ref": "#/$defs/localizationKey" },
+        "retry": { "$ref": "#/$defs/localizationKey" },
+        "saveFailed": { "$ref": "#/$defs/localizationKey" },
+        "loadMore": { "$ref": "#/$defs/localizationKey" },
+        "loadMoreFailed": { "$ref": "#/$defs/localizationKey" }
+      }
+    },
+    "coreCatalog": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/catalogEntry" },
+      "x-moztopia-locked": true
+    },
+    "catalog": {
+      "type": "array",
+      "maxItems": 256,
+      "items": { "$ref": "#/$defs/catalogEntry" }
+    }
+  },
+  "$defs": {
+    "channel": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "enabled": { "type": "boolean" }
+      },
+      "required": ["enabled"]
+    },
+    "catalogEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "category", "icon", "title", "detail", "channels"],
+      "properties": {
+        "type": { "$ref": "#/$defs/slug" },
+        "category": { "$ref": "#/$defs/slug" },
+        "action": { "$ref": "#/$defs/slug" },
+        "icon": {
+          "type": "string",
+          "enum": ["notification", "favorite", "star", "message", "shield", "account", "campaign"]
+        },
+        "title": { "$ref": "#/$defs/localizationKey" },
+        "detail": { "$ref": "#/$defs/localizationKey" },
+        "unavailableDetail": { "$ref": "#/$defs/localizationKey" },
+        "channels": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 3,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": ["inApp", "push", "email"]
+          }
+        }
+      }
+    },
+    "localizationKey": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "pattern": "^[A-Za-z0-9_.-]+$"
+    },
+    "slug": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 96,
+      "pattern": "^[A-Za-z][A-Za-z0-9_.-]*$"
+    }
+  }
+}

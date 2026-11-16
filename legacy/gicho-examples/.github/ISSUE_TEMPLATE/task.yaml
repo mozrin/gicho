@@ -1,0 +1,19 @@
+name: Maintenance task
+description: Track planned implementation, testing, documentation, or tooling work.
+title: "[Task]: "
+projects: ["moztopia/6"]
+type: task
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Intended outcome
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: "- [ ] …"
+    validations:
+      required: true

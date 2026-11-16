@@ -1,0 +1,43 @@
+level: simple
+defaultTheme: aquaBlue
+themes:
+  material:
+    name: Material blue
+    primary: "#6750A4"
+    secondary: "#625B71"
+    tertiary: "#7D5260"
+  aquaBlue:
+    name: Aqua blue
+    primary: "#0077B6"
+    secondary: "#00B4D8"
+    tertiary: "#48CAE4"
+  indigo:
+    name: Indigo
+    primary: "#3F51B5"
+    secondary: "#5C6BC0"
+    tertiary: "#7E57C2"
+  mandyRed:
+    name: Mandy red
+    primary: "#C62828"
+    secondary: "#E53935"
+    tertiary: "#FF7043"
+  green:
+    name: Forest green
+    primary: "#2E7D32"
+    secondary: "#558B2F"
+    tertiary: "#00897B"
+  gold:
+    name: Yukon gold
+    primary: "#9A6700"
+    secondary: "#C58F00"
+    tertiary: "#795548"
+  purple:
+    name: Royal purple
+    primary: "#6A1B9A"
+    secondary: "#8E24AA"
+    tertiary: "#D81B60"
+  slate:
+    name: Blue slate
+    primary: "#455A64"
+    secondary: "#546E7A"
+    tertiary: "#00695C"

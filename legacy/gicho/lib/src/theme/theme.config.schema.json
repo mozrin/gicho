@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/theme.config.schema.json",
+  "title": "Moztopia theme configuration",
+  "description": "Defines the simple theme catalog rendered by FlexColorScheme.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "level": {
+      "type": "string",
+      "const": "simple",
+      "x-moztopia-locked": true
+    },
+    "defaultTheme": {
+      "type": "string",
+      "minLength": 1,
+      "x-moztopia-locked": false
+    },
+    "themes": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "$ref": "#/$defs/theme" },
+      "x-moztopia-locked": false
+    }
+  },
+  "$defs": {
+    "theme": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "primary": { "$ref": "#/$defs/color" },
+        "secondary": { "$ref": "#/$defs/color" },
+        "tertiary": { "$ref": "#/$defs/color" }
+      },
+      "required": ["name", "primary"]
+    },
+    "color": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$"
+    }
+  }
+}

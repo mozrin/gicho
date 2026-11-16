@@ -1,0 +1,13 @@
+schemaVersion: 1
+brand:
+  name: Gicho
+theme:
+  available: [default, ocean, ember]
+  default: default
+app:
+  startup:
+    companyMinimumMilliseconds: 0
+    productMinimumMilliseconds: 0
+    loadingMinimumMilliseconds: 0
+    transition: fade
+    transitionMilliseconds: 300

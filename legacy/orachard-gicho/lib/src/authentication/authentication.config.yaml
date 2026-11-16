@@ -1,0 +1,31 @@
+copy:
+  heading: gicho.authentication.heading
+  introduction: gicho.authentication.introduction
+  agreement: gicho.authentication.agreement
+  moreProviders: gicho.authentication.moreProviders
+  moreProvidersTitle: gicho.authentication.moreProvidersTitle
+  back: gicho.authentication.back
+  cancel: gicho.authentication.cancel
+  retry: gicho.authentication.retry
+  configuredDisabled: gicho.authentication.configuredDisabled
+  serverUnavailable: gicho.authentication.serverUnavailable
+  phases:
+    checking: gicho.authentication.phases.checking
+    starting: gicho.authentication.phases.starting
+    browser: gicho.authentication.phases.browser
+    exchanging: gicho.authentication.phases.exchanging
+    refreshing: gicho.authentication.phases.refreshing
+  failures:
+    cancelled: gicho.authentication.failures.cancelled
+    offline: gicho.authentication.failures.offline
+    browserUnavailable: gicho.authentication.failures.browserUnavailable
+    providerUnavailable: gicho.authentication.failures.providerUnavailable
+    resultExpired: gicho.authentication.failures.resultExpired
+    sessionEnded: gicho.authentication.failures.sessionEnded
+    storageUnavailable: gicho.authentication.failures.storageUnavailable
+    generic: gicho.authentication.failures.generic
+providers:
+  - slug: google
+    label: gicho.authentication.providers.google
+    placement: primary
+    enabled: true

@@ -1,0 +1,27 @@
+name: Bug report
+description: Report an issue in a Gicho example application.
+title: "[Bug]: "
+labels: ["bug"]
+projects: ["moztopia/6"]
+type: bug
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      render: shell
+    validations:
+      required: true
+  - type: dropdown
+    id: example
+    attributes:
+      label: Affected example
+      options: [example.minimal, example.everything, repository tooling, other]
+    validations:
+      required: true

@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "app": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["startupMessage"],
+      "properties": {
+        "startupMessage": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

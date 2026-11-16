@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/logging.config.schema.json",
+  "title": "Moztopia logging configuration",
+  "description": "Validates package logging defaults and app logging overrides.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "boxing": {
+      "type": "boolean",
+      "x-moztopia-locked": false
+    },
+    "colors": {
+      "description": "Colors used for each log level.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "debug": {
+          "$ref": "#/$defs/color",
+          "x-moztopia-locked": false
+        },
+        "info": {
+          "$ref": "#/$defs/color",
+          "x-moztopia-locked": true
+        },
+        "warn": {
+          "$ref": "#/$defs/color",
+          "x-moztopia-locked": true
+        },
+        "error": {
+          "$ref": "#/$defs/color",
+          "x-moztopia-locked": true
+        }
+      }
+    }
+  },
+  "$defs": {
+    "color": {
+      "type": "string",
+      "enum": ["blue", "red", "yellow", "green", "purple"]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+brand:
+  name: Bootstrap Example
+  logoAsset: assets/launch_logo.png
+  markAsset: assets/launch_logo.png
+app:
+  startupMessage: Ready from application configuration

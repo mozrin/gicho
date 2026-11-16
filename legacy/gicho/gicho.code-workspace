@@ -1,0 +1,21 @@
+{
+  "folders": [
+    {
+      "name": "gicho",
+      "path": ".",
+    },
+    {
+      "name": "gicho-extensions",
+      "path": "../gicho-extensions",
+    },
+    {
+      "name": "gicho-examples",
+      "path": "../gicho-examples",
+    },
+    {
+      "name": "gicho-localization",
+      "path": "../gicho-localization",
+    },
+  ],
+  "settings": {},
+}

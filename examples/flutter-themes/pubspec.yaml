@@ -1,0 +1,24 @@
+name: gicho_themes_example
+description: A focused Gicho named-theme example.
+publish_to: none
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.13.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  gicho:
+    path: ../..
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/gicho/gicho.yaml
