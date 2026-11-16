@@ -25,3 +25,8 @@ Catalog values may contain named placeholders. Pass `variables` to `text`, for
 example `text('app.greeting', variables: {'name': customerName})` for a value
 such as `Hello, {name}`. Values come from the selected locale's catalog;
 missing keys still render the exact key.
+
+Missing selected-language values resolve through the app's English catalog,
+then package English, before returning an unknown key. Named interpolation
+applies after fallback. Selected-language app and package values keep precedence.
+The root localization regression and clean public-consumer fixture exercise this.

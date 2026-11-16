@@ -4,6 +4,25 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
+  test(
+    'missing selected-language app copy falls back to interpolated English',
+    () {
+      final controller = GichoLocaleController(
+        initialLocale: const Locale('th'),
+        enabledLocales: const [Locale('en'), Locale('th')],
+        appCatalogs: const {
+          'en': {'app.greeting': 'Hello, {name}'},
+        },
+      );
+      expect(
+        controller.text('app.greeting', variables: {'name': 'Ari'}),
+        'Hello, Ari',
+      );
+      expect(controller.text('app.unknown'), 'app.unknown');
+      controller.dispose();
+    },
+  );
+
   test('the shared registry uses the approved 20 codes', () {
     expect(
       GichoLocaleController.supportedLocales.map(

@@ -131,6 +131,8 @@ class GichoLocaleController extends ChangeNotifier {
     var value =
         _appCatalogs[code]?[key] ??
         _packageCatalogs[code]?[key] ??
+        _appCatalogs['en']?[key] ??
+        _packageCatalogs['en']?[key] ??
         gichoLocaleNames[key];
     if (value == null) {
       return key;
