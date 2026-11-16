@@ -1,6 +1,8 @@
 # Gicho documentation
 
-Start with [the root quick start](../README.md).
+Start with [the root quick start](../README.md), the [wiki](https://github.com/mozrin/gicho/wiki), [migration guide](migration.md), [bundled localization](localization.md), and [validation evidence](validation.md).
+
+The 0.0.9/0.0.10 checkpoint documents below describe the historical source baseline, not Gicho releases.
 
 - [0.0.9 CMS planning checkpoint](0.0.9-checkpoint.md): usable APIs,
   independent examples, checks and deferred navigation work.
