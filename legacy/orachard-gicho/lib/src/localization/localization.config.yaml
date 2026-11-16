@@ -1,0 +1,8 @@
+fallbackLanguage: en
+localSource: assets
+remoteEnabled: false
+remoteSource: git
+remoteLoadMode: background
+remoteRepository: https://github.com/mozrin/gicho
+remotePath: legacy/gicho-localization/example.everything
+remoteReference: develop

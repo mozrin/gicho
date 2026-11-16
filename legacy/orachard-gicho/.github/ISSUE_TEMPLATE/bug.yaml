@@ -1,0 +1,66 @@
+name: Bug report
+description: Report unexpected behavior in Gicho.
+title: "[Bug]: "
+labels: ["bug"]
+projects: ["moztopia/6"]
+type: bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. This issue will be added to the Gicho Project for triage.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the observed behavior and the behavior you expected.
+      placeholder: I expected …, but … happened.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Include a minimal Dart or Flutter example where possible.
+      placeholder: |
+        1. Configure …
+        2. Run …
+        3. Observe …
+      render: dart
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Gicho version
+      placeholder: e.g. 1.2.3
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Flutter and Dart versions, platform, and any relevant package versions.
+      placeholder: |
+        Flutter:
+        Dart:
+        Platform:
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      multiple: true
+      options:
+        - Core
+        - Authentication
+        - Configuration
+        - Components
+        - Localization
+        - Startup
+        - Tooling
+        - Documentation
+        - Other
+    validations:
+      required: true

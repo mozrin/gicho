@@ -1,0 +1,3 @@
+theme:
+  available: [default, ocean, ember]
+  default: ocean

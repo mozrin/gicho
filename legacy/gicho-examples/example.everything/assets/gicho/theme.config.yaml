@@ -1,0 +1,7 @@
+# Add app-specific simple themes here. Package themes remain available.
+themes:
+  sunset:
+    name: Bangkok Sunset
+    primary: "#D84315"
+    secondary: "#F57C00"
+    tertiary: "#6A1B9A"

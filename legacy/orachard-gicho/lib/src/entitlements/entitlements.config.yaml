@@ -1,0 +1,14 @@
+enabled: false
+provider:
+  adapter: qonversion
+  environment: production
+  launchMode: subscriptionManagement
+  cacheLifetime: month
+  projectKeys:
+    android: ""
+    ios: ""
+    macos: ""
+refresh:
+  intervalMinutes: 15
+  staleAfterMinutes: 60
+products: []

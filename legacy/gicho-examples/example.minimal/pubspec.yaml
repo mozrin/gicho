@@ -1,0 +1,27 @@
+name: example_minimal
+description: "Absolute-minimum Gicho adoption example."
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flextension_auth_mock:
+    path: ../../gicho-extensions/authentication/flextension_auth_mock
+  flextension_startup_showcase:
+    path: ../../gicho-extensions/startup/flextension_startup_showcase
+  flutter:
+    sdk: flutter
+  moztopia:
+    path: ../../gicho
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/gicho/

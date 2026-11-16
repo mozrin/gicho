@@ -1,0 +1,6 @@
+boxing: true
+colors:
+  debug: green
+  info: blue
+  warn: yellow
+  error: red

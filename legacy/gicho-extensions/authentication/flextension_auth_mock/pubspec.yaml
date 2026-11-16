@@ -1,0 +1,20 @@
+name: flextension_auth_mock
+description: Mock authentication Flextension for Gicho development and demos.
+version: 0.0.1
+publish_to: "none"
+
+environment:
+  sdk: ^3.12.2
+  flutter: ">=3.44.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  moztopia:
+    path: ../../../gicho
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true

@@ -1,0 +1,48 @@
+name: Feature request
+description: Propose a new capability or API for Gicho.
+title: "[Feature]: "
+labels: ["enhancement"]
+projects: ["moztopia/6"]
+type: feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Feature requests enter the Gicho Project for triage before implementation.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What developer or application need is not being met today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the public API, behavior, or user experience you have in mind.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Include current workarounds or other approaches, if any.
+    validations:
+      required: false
+  - type: dropdown
+    id: area
+    attributes:
+      label: Primary area
+      options:
+        - Core
+        - Authentication
+        - Configuration
+        - Components
+        - Localization
+        - Startup
+        - Tooling
+        - Documentation
+        - Other
+    validations:
+      required: true

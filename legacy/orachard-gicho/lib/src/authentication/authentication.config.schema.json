@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/authentication.config.schema.json",
+  "title": "Moztopia authentication configuration",
+  "description": "Controls provider presence, placement, state, and localized presentation keys.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "copy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "heading": { "$ref": "#/$defs/localizationKey" },
+        "introduction": { "$ref": "#/$defs/localizationKey" },
+        "agreement": { "$ref": "#/$defs/localizationKey" },
+        "moreProviders": { "$ref": "#/$defs/localizationKey" },
+        "moreProvidersTitle": { "$ref": "#/$defs/localizationKey" },
+        "back": { "$ref": "#/$defs/localizationKey" },
+        "cancel": { "$ref": "#/$defs/localizationKey" },
+        "retry": { "$ref": "#/$defs/localizationKey" },
+        "configuredDisabled": { "$ref": "#/$defs/localizationKey" },
+        "serverUnavailable": { "$ref": "#/$defs/localizationKey" },
+        "phases": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "checking": { "$ref": "#/$defs/localizationKey" },
+            "starting": { "$ref": "#/$defs/localizationKey" },
+            "browser": { "$ref": "#/$defs/localizationKey" },
+            "exchanging": { "$ref": "#/$defs/localizationKey" },
+            "refreshing": { "$ref": "#/$defs/localizationKey" }
+          }
+        },
+        "failures": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "cancelled": { "$ref": "#/$defs/localizationKey" },
+            "offline": { "$ref": "#/$defs/localizationKey" },
+            "browserUnavailable": { "$ref": "#/$defs/localizationKey" },
+            "providerUnavailable": { "$ref": "#/$defs/localizationKey" },
+            "resultExpired": { "$ref": "#/$defs/localizationKey" },
+            "sessionEnded": { "$ref": "#/$defs/localizationKey" },
+            "storageUnavailable": { "$ref": "#/$defs/localizationKey" },
+            "generic": { "$ref": "#/$defs/localizationKey" }
+          }
+        }
+      }
+    },
+    "providers": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "uniqueItems": true,
+      "contains": {
+        "type": "object",
+        "required": ["slug"],
+        "properties": {
+          "slug": { "const": "google" }
+        }
+      },
+      "minContains": 1,
+      "maxContains": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["slug", "label", "placement", "enabled"],
+        "properties": {
+          "slug": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]{1,63}$"
+          },
+          "label": { "$ref": "#/$defs/localizationKey" },
+          "placement": {
+            "type": "string",
+            "enum": ["primary", "secondary"]
+          },
+          "enabled": { "type": "boolean" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "localizationKey": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "pattern": "^[A-Za-z0-9_.-]+$"
+    }
+  }
+}

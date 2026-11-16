@@ -1,0 +1,23 @@
+/// Native language names shown by the shared picker in every package locale.
+const gichoLocaleNames = <String, String>{
+  'gicho.locale.en': 'English',
+  'gicho.locale.th': 'ไทย',
+  'gicho.locale.vi': 'Tiếng Việt',
+  'gicho.locale.id': 'Bahasa Indonesia',
+  'gicho.locale.ms': 'Bahasa Melayu',
+  'gicho.locale.fil': 'Filipino',
+  'gicho.locale.my': 'မြန်မာ',
+  'gicho.locale.km': 'ខ្មែរ',
+  'gicho.locale.lo': 'ລາວ',
+  'gicho.locale.zh': '简体中文',
+  'gicho.locale.ja': '日本語',
+  'gicho.locale.ko': '한국어',
+  'gicho.locale.hi': 'हिन्दी',
+  'gicho.locale.bn': 'বাংলা',
+  'gicho.locale.ar': 'العربية',
+  'gicho.locale.es': 'Español',
+  'gicho.locale.pt': 'Português',
+  'gicho.locale.fr': 'Français',
+  'gicho.locale.de': 'Deutsch',
+  'gicho.locale.ru': 'Русский',
+};

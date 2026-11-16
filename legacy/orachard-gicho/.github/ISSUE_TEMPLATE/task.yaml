@@ -1,0 +1,43 @@
+name: Maintenance task
+description: Track planned maintenance, documentation, tooling, or refactoring work.
+title: "[Task]: "
+projects: ["moztopia/6"]
+type: task
+body:
+  - type: markdown
+    attributes:
+      value: |
+        All implementation work is tracked in the Gicho Project before it begins.
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Intended outcome
+      description: State the concrete, verifiable result this work should achieve.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and acceptance criteria
+      description: List the important boundaries and completion checks.
+      placeholder: |
+        - [ ] …
+        - [ ] …
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Primary area
+      options:
+        - Core
+        - Authentication
+        - Configuration
+        - Components
+        - Localization
+        - Startup
+        - Tooling
+        - Documentation
+        - Other
+    validations:
+      required: true

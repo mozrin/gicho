@@ -1,0 +1,12 @@
+# Generated caches, build products, and local credentials are not references.
+**/.dart_tool/
+**/build/
+**/coverage/
+**/.env
+**/.env.*
+!**/.env.example
+**/*.jks
+**/*.keystore
+**/*.p12
+**/*.pfx
+**/key.properties

@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/entitlements.config.schema.json",
+  "title": "Moztopia store entitlement configuration",
+  "description": "Controls the reusable provider adapter, client-safe platform keys, refresh policy, and application product mappings.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "enabled": { "type": "boolean" },
+    "provider": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "adapter": {
+          "type": "string",
+          "enum": ["qonversion"]
+        },
+        "environment": {
+          "type": "string",
+          "enum": ["sandbox", "production"]
+        },
+        "launchMode": {
+          "type": "string",
+          "enum": ["subscriptionManagement", "analytics"]
+        },
+        "cacheLifetime": {
+          "type": "string",
+          "enum": ["week", "twoWeeks", "month", "twoMonths", "threeMonths", "sixMonths", "year", "unlimited"]
+        },
+        "projectKeys": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "android": { "$ref": "#/$defs/projectKey" },
+            "ios": { "$ref": "#/$defs/projectKey" },
+            "macos": { "$ref": "#/$defs/projectKey" }
+          }
+        }
+      }
+    },
+    "refresh": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "intervalMinutes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1440
+        },
+        "staleAfterMinutes": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10080
+        }
+      }
+    },
+    "products": {
+      "type": "array",
+      "maxItems": 128,
+      "items": { "$ref": "#/$defs/productMapping" }
+    }
+  },
+  "$defs": {
+    "projectKey": {
+      "type": "string",
+      "maxLength": 512,
+      "pattern": "^[A-Za-z0-9._-]*$"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "pattern": "^[A-Za-z][A-Za-z0-9_.-]*$"
+    },
+    "productMapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "offeringId", "entitlementId", "providerProductId", "providerEntitlementId"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "offeringId": { "$ref": "#/$defs/id" },
+        "entitlementId": { "$ref": "#/$defs/id" },
+        "providerProductId": { "$ref": "#/$defs/id" },
+        "providerEntitlementId": { "$ref": "#/$defs/id" }
+      }
+    }
+  }
+}

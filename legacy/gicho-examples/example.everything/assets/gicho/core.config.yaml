@@ -1,0 +1,16 @@
+# These switches control the standard app-bar buttons supplied by Gicho.
+appBar:
+  actions:
+    # Show the button that switches between light and dark mode.
+    brightness:
+      enabled: true
+    # Show the button that opens the theme and color-scheme selector.
+    theme:
+      enabled: true
+    # Show the button that opens the language selector.
+    language:
+      # Hidden globally; AppShell enables it only on FNav1 in Dart.
+      enabled: false
+    # Show the button that displays the resolved configuration map.
+    configDisplay:
+      enabled: true
